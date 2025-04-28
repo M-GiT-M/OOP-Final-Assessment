@@ -266,23 +266,60 @@ class Character:
             character.armor_equipped = Item.item_dict(data["Armor Equipped"])
         return character
 
-class Enemy:
-    def __init__(self, name, hp = 50):
+class Enemy(ABC):
+    def __init__(self, name, hp = 70, attack_power = 5, defense = 0):
         self.name = name
         self.hp = hp
+        self.attack_power = attack_power
+        self.defense = defense
+        #Items that could drop from the enemies - to be used by the player
+        self.drops = []
 
     def is_alive(self):
         if self.hp > 0:
             return f"{self.name} is alive."
         
+    def get_defense(self):
+        return self.defense
+    
+    @abstractmethod
     def attack(self, character):
-        damage = random.randint(5, 10)
-        print(f"{self.name} attacks {character.name} with {damage} Damage!")
-        character.take_damage(damage)
+        #SubClasses (different enemies) will have different attack methods
+        pass
 
     def take_damage(self, damage):
-        self.hp -= damage
-        print(f"{self.name} takes {damage} Damage! - Current HP: {self.hp}")
+        #Checks if there is a defense reduction applied
+        reduced_damage = max(1, damage - self.damage)
+        self.hp -= reduced_damage
+        print(f"{self.name} takes {reduced_damage} Damage! - Current HP: {self.hp}")
+
+    def drop_item(self):
+        #Checks if the enemy dropped an item
+        if not self.drops:
+            return None
+        
+        #Creates a probbality of the enemy dropping and item
+        roll = random.random()
+        total_prob = 0
+
+        for item, prob in self.drops:
+            total_prob += prob
+            if roll <= total_prob:
+                #Creates a copy of the item with random stats - with 25% Variarion
+                variation = random.uniform(0.8, 1.25) 
+
+                #Creates and drops the new item
+                dropped_item = Item(
+                    item.name,
+                    item.description,
+                    int(item.attack * variation) if item.attack else 0,
+                    int(item.defense * variation) if item.defense else 0,
+                    item.consumable,
+                    item.effect,
+                    int(item.effect_amount * variation) if item.effect_amount else 0
+                )
+                return dropped_item
+        return None
 
 def combat(player, enemy):
     print(f"\n {enemy.name} has Appeared!")
