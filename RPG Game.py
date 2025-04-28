@@ -1,12 +1,57 @@
 import random
 
 class Item: 
-    def __init__(self, name, description = ""):
+    def __init__(self, name, description = "", attack = 0, defense = 0, consumable = False, effect = None, effect_amount = 0, crafting_items = None):
         self.name = name
         self.description = description
+        self.attack = attack
+        self.defense = defense
+        self.consumable = consumable
+        self.effect = effect
+        #Effect on Strength, Health, etc. 
+        self.effect_amount = effect_amount
+        self.crafting_items = crafting_items
+        #The components required for crafting the item
 
     def __str__(self):
-        return f"{self.name}: {self.description}" if self.description else self.name
+        item_details = f"{self.name}: {self.description}" if self.description else self.name
+        if self.attack > 0:
+            item_details += f" | Attack: +{self.attack}"
+            #Adds on to the current attack power if the item has an attack power greater than 0
+        if self.defense > 0:
+            item_details += f" | Defense: +{self.defense}"
+            #Adds on to the current defense shield if the item has a defense power greater than 0
+        if self.consumable:
+            item_details += f" | Consumable: {self.effect} +{self.effect_amount}"
+            #Adds a consumable amount if the item is a consumable
+        return item_details
+    
+    def save_item(self):
+        #Saving the item to a dictionary
+        return {
+            "Name": self.name,
+            "Description": self.description,
+            "Attack Power": self.attack,
+            "Defense Shield": self.defense,
+            "Consumable": self.consumable,
+            "Effect": self.effect,
+            "Effect Amount": self.effect_amount,
+            "Crafting Items": self.crafting_items
+        }
+    
+    @staticmethod
+    def item_dict(data):
+        #Creates an item from the dictionary when loading
+        return Item(
+            name = data["Name"],
+            description = data["Description"],
+            attack = data["Attack Power"],
+            defense = data["Defense Shield"],
+            consumable = data["Consumable"],
+            effect = data["Effect"],
+            effect_amount = data["Effect Amount"],
+            crafting_items = data["Crafting Items"]
+        )
     
 class Character:
     def __init__(self, name, hp = 100):
@@ -93,3 +138,25 @@ def combat(player, enemy):
         print(f"\nCongratulations! You have defeated the {enemy.name}!")
     else:
         print("\nYou have been defeated. Good Try!")
+
+def main_menu():
+    #Creating a loop of the game
+    while True:
+        print("\n======= RPG Adventure Game =======")
+        print("1 - Start")
+        print("2 - Exit")
+        choice = input("Enter your Choice: ")
+        if choice == "1":
+            name = input("Enter your Hero's Name: ")
+            player = Character(name)
+            #Giving the player a starter-kit
+            player.add_item(Item("Stick", "Wooden Stick - Power = 1"))
+            combat(player, Enemy("Ogre"))
+        elif choice == "2":
+            print("Exiting the Game - Goodbye!")
+            quit()
+        else:
+            print("Invalid Choice.")
+
+if __name__ == "__main__":
+    main_menu()
