@@ -8,6 +8,10 @@
 - Understanding the requirements and following the criteria, facing a bit of difficulty as the requirements are a lot and are     not ordered.
 - Set up a 3-day Plan to complete the project and fulfill all the requirements asked.
 
+# Game Instructions
+
+# Unit Test Instructions 
+
 # Day 1 - April 28
 - Started by initialising the classes: Item, Character and Enemy.
   # Item Class
@@ -24,5 +28,10 @@
     - Created a craft method for potion/consumable making to increase health and checkec if the player has reuired components
     - Also saved character to a dictionary with all of its details, if a game is loaded all details are still available
   # Enemy Parent Class
-    - 
-- Planning to finish the Item, Character and Parent Enemy Class, while focusing on subclasses (different enemies) tomorrow.
+    - Created a list of drops which are items that when dropped can be taken and used by the player
+    - Created an abstractmethod for the attack method to be later integrated specifically to each enemy
+    - Method of items dropped created with a random probabilty and random attack/defense amount it recieves
+    - Will implement different enemies that have unique attack power and attributes
+    - Planning on making 3-5 enemies like a dragon, ogre, giant, wizard and minotaur.
+_ Day 1 Complete - 40% of Project completed with the essential classes defined, a clear layout of the game has been strategically thought of and I am inventing new ideas as I go along.
+- Having difficulty on how to save/load game but with research will figure it out, already started by saving character and items to dictionaries
