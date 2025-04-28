@@ -10,9 +10,19 @@
 
 # Day 1 - April 28
 - Started by initialising the classes: Item, Character and Enemy.
-- Then began the combat function where the actual dialogue occurs
-- Enhanced the Item class to show more detail and saved it to a dictionary with all its details
-- Will enhance the character Item to include more details and properties, like strength, hp, equipped weapon and equipped armor
-- Will add extra methods in the Character class to calculate total defense shield or total attack power, equiping an item, crafting an item, etc.
-- Will also save character to dictionary with all its details
+  # Item Class
+    - Enhanced the Item class to show more detail and saved it to a dictionary with all its details
+    - By saving to dictionary I enable the user to start a new game or load an existing game with all details stored
+  # Character Class
+    - Set a max_hp so that even if armor is equipped and consumables are taken, the hp stays realistic
+    - Created methods to know the current attack power and the currenr defense shield to enable the user to plan future               decisions
+    - Set critical hits with a chance of 15% happening, once it occurs the damage is increased by 75%
+    - Added any extra attack power or defense power when checking for current attack power and defense shield
+    - Created a consumable method to use them for either Strength or Health
+    - Created an equip method to equip armor (considered existing armor to be unequipped first) and to equip a weapon                (considered existing weapons to be uneqipped first)
+    - When the player opens the inventory it also gives details of the items currently equipped/in-use
+    - Created a craft method for potion/consumable making to increase health and checkec if the player has reuired components
+    - Also saved character to a dictionary with all of its details, if a game is loaded all details are still available
+  # Enemy Parent Class
+    - 
 - Planning to finish the Item, Character and Parent Enemy Class, while focusing on subclasses (different enemies) tomorrow.
