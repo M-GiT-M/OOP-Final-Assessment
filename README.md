@@ -64,4 +64,16 @@
     - Also indicates who's turn it is
     - If a player chooses to defend, they recieve a temporary shield bonus (2x their current shield)
   # Crafting Items
-    -
+    - Created a function that displays all available crafts and their recipes in a dictionary, for optimal and efficient use
+    - Mainly Health/Defense Oriented since Drops are going to provide more strength/attack enhancing items
+    - Some recipes include health potions and armor
+    - Created different levels of health potions for further depth
+  # Game Loop
+    - Started with the Main Menu Section, which is the inro to the Game with 3 options: New Game, Load Game or to Exit
+    - Gave all plaeyrs a 'starter kit' to be able to combat the enemies realistically, mixing different item enhancements
+    - Then built the actual game, with 9 different options: 3 to battle the different enemies, 4 for item check/use and 2 that        are game functions like save and returning to Main Menu
+    - When choosing to craft an item, the recipes are shown, so the player can check that and then proceed to Inventory to see        if they are capable of crafting the desired item.
+    - Used Try and Except to handle errors efficiently
+
+- Day 2 Complete - 80% of Project Completed, by finalising the main loop/cpmbat of the game, creating a main menu and   i   i     introducing items that can be crafted or collected as drops.
+- Will implement the unit tests tomorrow and then go over documentation and the README file to polish. On the 4th Day I will      conduct a final review of all code and ensure the code is logical and efficient, as well as, fulfilling of the criteria.
