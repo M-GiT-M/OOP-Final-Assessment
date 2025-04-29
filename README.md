@@ -36,3 +36,8 @@
  
 - Day 1 Complete - 40% of Project completed with the essential classes defined, a clear layout of the game has been strategically thought of and I am inventing new ideas as I go along.
 - Having difficulty on how to save/load game but with research will figure it out, already started by saving character and items to dictionaries
+
+# Day 2 - April 29
+- Will work on the Enemy Subclasses to create different enemies and either begin or finish the combat section.
+  # Ogre
+    -
