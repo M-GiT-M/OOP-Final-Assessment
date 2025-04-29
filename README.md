@@ -41,4 +41,15 @@
 - Will work on the Enemy Subclasses to create different enemies and on the save/load game.
 - Settled on 3 Different Enemies: Ogre, Witch and Giant
   # Ogre
-    -
+    - Made the ogre have greater attack power than defense (supposing an ogre is not the brightest)
+    - Created 4 Different drops with different chances of happening, two increasing attack/strength and two increasing                defense/health
+    - Gave the ogre a special 'Body Slam' attack, with a 15% chance of occuring and ignoring some shield from the character
+  # Witch
+    - Made the Witch have grreater defense shield than attack power as a Witch generally casts protection spells
+    - Created 3 different drops with different chances of occuring, 2 increasing health/defense and 1 for attack power
+    - Gave the witch a special 'Banshee Cackle' attack with the chance of occuring twice
+  # Giant
+    - Made the giant have immense health power and attack power, as it the Giant is Giant.
+    - Created 4 different drops with difference chances of happening, 2 for health/defense and 2 for attack/strength
+    - Gavr the Giant 2 special attacks 'Giant Stomp' and 'Giant Smoosh' with the chance of the giant smoosh occuring twice
+ # Save/Load
