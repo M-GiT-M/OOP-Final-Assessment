@@ -22,6 +22,3 @@ def main_menu():
             quit()
         else:
             print("Invalid Choice.")
-
-if __name__ == "__main__":
-    main_menu()
