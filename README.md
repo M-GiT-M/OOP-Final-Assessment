@@ -57,3 +57,11 @@
     - Also used try and except to handle errors for loading, it first checks if the filename exists to then take the                  information on it and store it to the player
 
 - After looking at the criteria I realised I missed an important requirement, which was to separate the code into readable        parts and to also increase professionalism. I faced a few difficulties planning how to efficiently segregate my code, but was   able to fulfill the requirement and will continue building on this project in these newly segregated areas.
+
+  # Combat Dialogue
+    - Made 6 total options to include using/equipping items and the choice to attack/defend, plus other options.
+    - Used try and except to handle errors
+    - Also indicates who's turn it is
+    - If a player chooses to defend, they recieve a temporary shield bonus (2x their current shield)
+  # Crafting Items
+    -
