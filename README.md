@@ -52,8 +52,8 @@
     - Made the giant have immense health power and attack power, as it the Giant is Giant.
     - Created 4 different drops with difference chances of happening, 2 for health/defense and 2 for attack/strength
     - Gavr the Giant 2 special attacks 'Giant Stomp' and 'Giant Smoosh' with the chance of the giant smoosh occuring twice
- # Save/Load
-   - Used try and except to handle errors, it converts the information or current statistics to dictionary to save to a file,        using JSON
-   - Also used try and except to handle errors for loading, it first checks if the filename exists to then take the information      on it and store it to the player
+  # Save/Load
+    - Used try and except to handle errors, it converts the information or current statistics to dictionary to save to a file,        using JSON
+    - Also used try and except to handle errors for loading, it first checks if the filename exists to then take the                  information on it and store it to the player
 
 - After looking at the criteria I realised I missed an important requirement, which was to separate the code into readable        parts and to also increase professionalism. I faced a few difficulties planning how to efficiently segregate my code, but was   able to fulfill the requirement and will continue building on this project in these newly segregated areas.
