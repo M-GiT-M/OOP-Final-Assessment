@@ -1,5 +1,6 @@
 import random
 from abc import ABC, abstractmethod
+import json
 
 class Item: 
     def __init__(self, name, description = "", attack = 0, defense = 0, consumable = False, effect = None, effect_amount = 0, crafting_items = None):
@@ -401,31 +402,48 @@ class Giant(Enemy):
             (Item("Giant's Strength", "Immense Strength Boost", consumable = True, effect = "Strength", effect_amount = 12), 0.1)
         ]
 
-        def attack(self, character):
-            #Giant has 2 different attack types
-            attack_types = random.randint(1, 2)
+    def attack(self, character):
+        #Giant has 2 different attack types
+        attack_types = random.randint(1, 2)
 
-            #Giant Stomp
-            if attack_types == 1:
-                damage = random.randint(self.attack_power - 2, self.attack_power + 2)
+        #Giant Stomp
+        if attack_types == 1:
+            damage = random.randint(self.attack_power - 2, self.attack_power + 2)
+            reduced_damage = max(1, damage - character.current_defense_shield())
+            print(f"{self.name} STOMPS {character.name} with its Giant Feet dealing {reduced_damage} Damage!")
+            character.take_damage(reduced_damage)
+
+        #Giant Smoosh
+        elif attack_types == 2:
+            damage = random.randint(self.attack_power - 4, self.attack_power)
+            #Giant Smoosh has a chance of happening twice
+            if random.random() < 0.4:
+                print(f"{self.name} with the Great Giant Smoosh!")
                 reduced_damage = max(1, damage - character.current_defense_shield())
-                print(f"{self.name} STOMPS {character.name} with its Giant Feet dealing {reduced_damage} Damage!")
+                print(f"{self.name} smooshes twice with {reduced_damage} Damage EACH TIME!")
+                character.take_damage(reduced_damage)
+                character.take_damage(reduced_damage)
+            else:
+                reduced_damage = max(1, damage - character.current_defense_shield())
+                print(f"{self.name} smooshes {character.name} dealing {reduced_damage} Damage!")
                 character.take_damage(reduced_damage)
 
-            #Giant Smoosh
-            elif attack_types == 2:
-                damage = random.randint(self.attack_power - 4, self.attack_power)
-                #Giant Smoosh has a chance of happening twice
-                if random.random() < 0.4:
-                    print(f"{self.name} with the Great Giant Smoosh!")
-                    reduced_damage = max(1, damage - character.current_defense_shield())
-                    print(f"{self.name} smooshes twice with {reduced_damage} Damage EACH TIME!")
-                    character.take_damage(reduced_damage)
-                    character.take_damage(reduced_damage)
-                else:
-                    reduced_damage = max(1, damage - character.current_defense_shield())
-                    print(f"{self.name} smooshes {character.name} dealing {reduced_damage} Damage!")
-                    character.take_damage(reduced_damage)
+#Saving the Game
+def save_game(player, filename = "save_game.json"):
+    #Saving the current game statistics and details to a file
+    try:
+        #Converting the player to dictionary
+        player_details = player.save_character()
+
+        #Saving the player to the file
+        with open(filename, "w") as f:
+            json.dump(player_details, f, indent = 2)
+
+        print(f"Game Saved - {filename}")
+        return True
+    except Exception as e:
+        print(f"Having Trouble Saving the Game: {e}")
+        return False
             
 def combat(player, enemy):
     print(f"\n {enemy.name} has Appeared!")
