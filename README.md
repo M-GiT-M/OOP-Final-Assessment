@@ -38,6 +38,7 @@
 - Having difficulty on how to save/load game but with research will figure it out, already started by saving character and items to dictionaries
 
 # Day 2 - April 29
-- Will work on the Enemy Subclasses to create different enemies and either begin or finish the combat section.
+- Will work on the Enemy Subclasses to create different enemies and on the save/load game.
+- Settled on 3 Different Enemies: Ogre, Witch and Giant
   # Ogre
     -
