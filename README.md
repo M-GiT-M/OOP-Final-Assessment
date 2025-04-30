@@ -107,3 +107,10 @@
       - typing python -m unittest UnitTests/UnitTests.py in the terminal
       - or simply running it if on a software like vscode
       - Should run 7 tests and all should run smoothly - 'Ok'
+
+# Final Comments
+  - Expected Completion was tomorrow but after going through the code, testing it and following the criteria, I found that my project is 100%       Complete. Knowing myself, it would be better to submit earlier as I would start contemplating a lot of features.
+  - Had a lot of difficulty with unittests but after looking at some videos and doing some reasearch, I was able to fix the issues present and      clear it from all failures.
+
+By: Mahmoud Mustafa
+ID: 50101667
