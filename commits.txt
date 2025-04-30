@@ -1,0 +1,37 @@
+891dd27 - Mahmoud Mustafa, 2025-04-30 21:14:17 +0300 : Merging Branches
+0804183 - Mahmoud Mustafa, 2025-04-30 21:13:35 +0300 : Update README.md
+daf57db - Mahmoud Mustafa, 2025-04-30 21:10:48 +0300 : Project 100% Complete - Pycache is from Python to Run Code Quicker in Future Runs
+37fdb6d - Mahmoud Mustafa, 2025-04-30 20:53:44 +0300 : Update README.md
+1c41c0b - Mahmoud Mustafa, 2025-04-30 20:35:45 +0300 : Project 95% Complete - Unit Tests Done
+75ab9b4 - Mahmoud Mustafa, 2025-04-30 00:57:04 +0300 : Update README.md
+66ac556 - Mahmoud Mustafa, 2025-04-30 00:46:52 +0300 : Completed the Full Game Loop
+cfd1fa8 - Mahmoud Mustafa, 2025-04-29 23:29:02 +0300 : Main Menu Section Completed
+1c08c59 - Mahmoud Mustafa, 2025-04-29 23:16:46 +0300 : Created Crafting Items' Recipes
+0c64567 - Mahmoud Mustafa, 2025-04-29 22:50:08 +0300 : Update README.md
+c3f86b6 - Mahmoud Mustafa, 2025-04-29 22:44:47 +0300 : Finalised Combat.py File - Added 3 More Choices
+d451a27 - Mahmoud Mustafa, 2025-04-29 21:32:29 +0300 : Update README.md
+ca131a4 - Mahmoud Mustafa, 2025-04-29 21:31:57 +0300 : Update README.md
+218e604 - Mahmoud Mustafa, 2025-04-29 21:31:33 +0300 : Update README.md
+f9bbe08 - Mahmoud Mustafa, 2025-04-29 21:31:08 +0300 : Update README.md
+e0b1f85 - Mahmoud Mustafa, 2025-04-29 21:26:36 +0300 : Separated functionality into different folders
+ba1a920 - Mahmoud Mustafa, 2025-04-29 20:58:37 +0300 : Loading Game from a File - Complete
+5c87d69 - Mahmoud Mustafa, 2025-04-29 20:51:44 +0300 : Save Feature Implemented
+34b0921 - Mahmoud Mustafa, 2025-04-29 20:41:20 +0300 : Update README.md
+b54154c - Mahmoud Mustafa, 2025-04-29 20:33:14 +0300 : Completed Different Enemy Types: Ogre, Witch & Giant
+03e7c8f - Mahmoud Mustafa, 2025-04-29 19:55:42 +0300 : Update README.md
+47b648d - Mahmoud Mustafa, 2025-04-29 19:30:23 +0300 : Update README.md
+5c1b8a0 - Mahmoud Mustafa, 2025-04-29 00:30:54 +0300 : Update README.md
+bab4515 - Mahmoud Mustafa, 2025-04-29 00:30:39 +0300 : Update README.md
+bcdaf1a - Mahmoud Mustafa, 2025-04-29 00:29:58 +0300 : Update README.md
+f6a5716 - Mahmoud Mustafa, 2025-04-29 00:22:29 +0300 : Day 1 Complete - Enhanced Enemy Class
+e3ae92b - Mahmoud Mustafa, 2025-04-29 00:00:43 +0300 : Update README.md
+9d84447 - Mahmoud Mustafa, 2025-04-28 23:51:28 +0300 : Enhanced the 'Character' Class
+5f162a1 - Mahmoud Mustafa, 2025-04-28 21:43:32 +0300 : Update README.md
+b797768 - Mahmoud Mustafa, 2025-04-28 21:38:07 +0300 : Enhanced the 'Item' Class
+a2b59e5 - Mahmoud Mustafa, 2025-04-28 20:52:36 +0300 : Integrated the Combat Dialogue
+0288dcf - Mahmoud Mustafa, 2025-04-28 20:39:15 +0300 : Merging
+2e07714 - Mahmoud Mustafa, 2025-04-28 20:36:14 +0300 : Update README.md
+c61d6bc - Mahmoud Mustafa, 2025-04-28 20:35:11 +0300 : Integrated the starter code Item, Character and Enemy Classes
+96dcf25 - Mahmoud Mustafa, 2025-04-28 20:00:24 +0300 : Commit Test
+5b4755a - Mahmoud Mustafa, 2025-04-28 19:54:09 +0300 : Update README.md
+fe825c1 - Mahmoud Mustafa, 2025-04-28 19:48:53 +0300 : Initial commit
