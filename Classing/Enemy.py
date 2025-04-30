@@ -25,7 +25,7 @@ class Enemy(ABC):
 
     def take_damage(self, damage):
         #Checks if there is a defense reduction applied
-        reduced_damage = max(1, damage - self.damage)
+        reduced_damage = max(1, damage - self.defense)
         self.hp -= reduced_damage
         print(f"{self.name} takes {reduced_damage} Damage! - Current HP: {self.hp}")
 
@@ -65,7 +65,7 @@ class Ogre(Enemy):
         self.drops = [
             (Item("Ogre Bat", "A Wooden Bat with Spiky Thorns", attack = 5), 0.25),
             (Item("Almighty Strand", "A Strand of the Ogre's Hair", defense = 4), 0.3),
-            (Item("Strength Potion", "Temporary Boost to Strength", consumable = True, effect = "Strength", effect_amount = 5), 0.15)
+            (Item("Strength Potion", "Temporary Boost to Strength", consumable = True, effect = "Strength", effect_amount = 5), 0.15),
             (Item("Health Potion", "Health Restoration", consumable = True, effect = "Health", effect_amount = 4), 0.2)
         ]
     def attack(self, character):
@@ -95,7 +95,7 @@ class Witch(Enemy):
 
         #Setting up the probablity of Drops
         self.drops = [
-            (Item("The Raven Dagger", "The Blade Enchanted with the Power of Ravens", attack = 7), 0.25)
+            (Item("The Raven Dagger", "The Blade Enchanted with the Power of Ravens", attack = 7), 0.25),
             (Item("Poison Apple", "An extra but dangerous Boost to Health", defense = 2), 0.4),
             (Item("Gamma Vial", "Restores Health Swiftly", consumable = True, effect = "Health", effect_amount = 25), 0.15)
         ]

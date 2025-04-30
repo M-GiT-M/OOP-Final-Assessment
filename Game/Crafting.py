@@ -16,7 +16,7 @@ def get_all_recipes():
             "Restores Health",
             consumable = True,
             effect = "Health",
-            effect_value = 25,
+            effect_amount = 25,
             crafting_items = ["Herb", "Empty Vial"]
         ),
         "Strength Potion": Item(

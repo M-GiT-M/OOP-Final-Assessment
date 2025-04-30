@@ -21,11 +21,12 @@ def combat(player, enemy):
             #Attack
             if move == "1":
                 player.attack(enemy)
+                break
             
             #Use Item
             elif move == "2":
                 player.show_inventory()
-                if player.inventory():
+                if player.inventory:
                     try:
                         item_index = int(input("Enter item number to use (0 to exit): ")) - 1
                         if item_index == -1:

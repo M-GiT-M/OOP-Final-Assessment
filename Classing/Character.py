@@ -45,7 +45,7 @@ class Character:
             damage = int(damage * 1.75)
             print(f"CRITICAL DAMAGE! - dealt by {self.name}")
         #In the case the enemy has extra defense its applied
-        damage = max(1, damage - enemy.current_defense_shield())
+        damage = max(1, damage - enemy.get_defense())
 
         #Player Attacking Dialogue 
         print(f"{self.name} attacks {enemy.name} with {damage} Damage!")
@@ -81,7 +81,7 @@ class Character:
                 self.inventory.pop(item_i)
             return True
         else:
-            print(f"Invalid Use of {item.name}.")
+            print(f"Invalid item index or unusable item.")
             return False
         
     def equip_item(self, item_i):

@@ -40,7 +40,7 @@ def main_menu():
         #Exitting the Game
         elif choice == "3":
             print("Hope you Enjoyed the Game! See you Again!")
-            quit()
+            break
 
         else:
             print("Invalid Option - Please Choose one of the Listed Options")
